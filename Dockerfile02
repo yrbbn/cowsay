@@ -1,0 +1,10 @@
+#cowsay Container - v0.2
+FROM centos:latest
+
+MAINTAINER weithenn@weithenn.org
+
+RUN yum -y update
+RUN yum install -y epel-release
+RUN yum install -y cowsay
+
+CMD ["/usr/bin/cowsay","Docker is very good !"]
